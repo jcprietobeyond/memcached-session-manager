@@ -209,6 +209,13 @@
 					<configLocation>../etc/checkstyle-checks.xml</configLocation>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
+			</plugin>
 		</plugins>
 	</reporting>
 
@@ -408,18 +415,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-site-plugin</artifactId>
-                        <version>3.4</version>
-                        <configuration>
-                            <reportPlugins>
-                                <plugin>
-                                    <groupId>org.apache.maven.plugins</groupId>
-                                    <artifactId>maven-javadoc-plugin</artifactId>
-                                    <configuration>
-                                        <additionalparam>-Xdoclint:none</additionalparam>
-                                    </configuration>
-                                </plugin>
-                            </reportPlugins>
-                        </configuration>
+						<version>3.6</version>
                     </plugin>
                 </plugins>
             </build>
